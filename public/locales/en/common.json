@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "home": "Home",
+    "originals": "Original Paintings",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Open navigation",
+    "closeMenu": "Close navigation"
+  },
+  "site": {
+    "masthead": "N. ART STUDIO"
+  },
+  "hero": {
+    "eyebrow": "Original Fine Art",
+    "headline": "Color-soaked stories painted by hand",
+    "description": "I craft vibrant, tactile paintings that invite you to pause, breathe, and feel. Each piece is made slowly and intentionally for intimate spaces that celebrate light.",
+    "cta": "View originals",
+    "supporting": "Worldwide shipping available"
+  },
+  "featured": {
+    "eyebrow": "New Collection",
+    "title": "Featured originals",
+    "description": "A rotating selection of paintings currently in the studio. Each work is one of a kind and ships with a signed certificate of authenticity.",
+    "viewAll": "See the full catalogue"
+  },
+  "home": {
+    "storyTitle": "Paintings for luminous, lived-in spaces",
+    "storyBody": "From large-scale statement pieces to intimate works on paper, my paintings are built on layers of color, translucent glazes, and marks collected from travel. I believe art should feel personal, tactile, and alive.",
+    "collectorInvite": "Collectors receive first access to new releases, studio visits, and commissions. Let's find the perfect piece for your space.",
+    "contactCta": "Start a conversation"
+  },
+  "paintings": {
+    "status": {
+      "available": "Available",
+      "sold": "Collected"
+    },
+    "fields": {
+      "size": "Size",
+      "materials": "Materials",
+      "year": "Year",
+      "price": "Price"
+    }
+  },
+  "originals": {
+    "title": "Original paintings",
+    "intro": "Every painting is created in small batches in my light-filled studio. Works ship worldwide, crated with museum-grade materials and insured delivery.",
+    "inquireCta": "Inquire about this piece"
+  },
+  "about": {
+    "eyebrow": "Meet the artist",
+    "title": "Hi, I'm Natalia - painter, traveler, collector of color.",
+    "paragraph1": "My practice lives at the intersection of intuition and structure. Raised between Buenos Aires and Madrid, I draw inspiration from architecture, vintage textiles, and the rhythm of everyday rituals.",
+    "paragraph2": "Each painting begins as a field of gestures - inks, charcoal, stitched marks - and evolves through translucent layers of oil and acrylic. I build surfaces that invite touch and reward close looking.",
+    "paragraph3": "I have exhibited in Latin America and Europe, and my originals live in private collections across both continents. My studio is open by appointment for collectors and collaborators.",
+    "practiceTitle": "Studio practice",
+    "practiceDescription": "Large-scale canvases, works on paper, and bespoke commissions crafted in limited series.",
+    "inspirationTitle": "Inspiration",
+    "inspirationDescription": "Sun-faded facades, botanical forms, found typography, and music-filled evenings."
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let's create something together",
+    "intro": "For sales inquiries, collaborations, or studio visits, reach out using the form or via email. I respond to every message within two business days.",
+    "emailLabel": "Email",
+    "emailValue": "hello@example.com",
+    "phoneLabel": "Phone",
+    "phoneValue": "+1 (555) 123-4567",
+    "locationLabel": "Based in",
+    "locationValue": "Buenos Aires & Madrid",
+    "form": {
+      "name": "Your name",
+      "email": "Email address",
+      "message": "Tell me about your project",
+      "submit": "Send message",
+      "success": "Thank you for reaching out. I'll reply very soon."
+    },
+    "details": {
+      "title": "Studio details",
+      "description": "Private studio visits are available by appointment. Please email to schedule.",
+      "email": "Studio email",
+      "phone": "Studio phone",
+      "location": "Studio location",
+      "social": "Follow along"
+    }
+  },
+  "footer": {
+    "tagline": "Original paintings, crafted by hand for modern homes and thoughtful collectors.",
+    "copyright": "Copyright {{year}} Natalia Brugnoni. All rights reserved."
+  },
+  "meta": {
+    "homeTitle": "Natalia Brugnoni - Contemporary Artist",
+    "homeDescription": "Explore original paintings, learn about the artist, and connect for commissions or studio visits.",
+    "originalsTitle": "Original Paintings - Natalia Brugnoni",
+    "originalsDescription": "Browse the full catalogue of available and collected original paintings by Natalia Brugnoni.",
+    "aboutTitle": "About the Artist - Natalia Brugnoni",
+    "aboutDescription": "Meet contemporary artist Natalia Brugnoni and discover the stories behind her work.",
+    "contactTitle": "Contact the Studio - Natalia Brugnoni",
+    "contactDescription": "Reach out to Natalia Brugnoni for artwork inquiries, collaborations, and studio visits."
+  }
+}

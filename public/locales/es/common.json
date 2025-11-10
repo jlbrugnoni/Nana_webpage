@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "originals": "Obras originales",
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "openMenu": "Abrir navegación",
+    "closeMenu": "Cerrar navegación"
+  },
+  "site": {
+    "masthead": "N. ART STUDIO"
+  },
+  "hero": {
+    "eyebrow": "Arte original",
+    "headline": "Historias vibrantes pintadas a mano",
+    "description": "Creo pinturas táctiles y llenas de color que invitan a pausar, respirar y sentir. Cada pieza nace de un proceso lento e intencional para espacios íntimos que celebran la luz.",
+    "cta": "Ver originales",
+    "supporting": "Envíos a todo el mundo"
+  },
+  "featured": {
+    "eyebrow": "Nueva colección",
+    "title": "Originales destacados",
+    "description": "Una selección rotativa de obras disponibles en el estudio. Cada pieza es única y viaja con certificado de autenticidad firmado.",
+    "viewAll": "Ver catálogo completo"
+  },
+  "home": {
+    "storyTitle": "Pinturas para espacios vividos y luminosos",
+    "storyBody": "Desde lienzos de gran formato hasta obras íntimas sobre papel, mis pinturas se construyen con capas de color, veladuras translúcidas y gestos recolectados en viaje. Creo que el arte debe sentirse personal, táctil y vivo.",
+    "collectorInvite": "Las y los coleccionistas reciben acceso prioritario a lanzamientos, visitas al estudio y encargos. Encontraremos la pieza perfecta para tu espacio.",
+    "contactCta": "Conversemos"
+  },
+  "paintings": {
+    "status": {
+      "available": "Disponible",
+      "sold": "Coleccionada"
+    },
+    "fields": {
+      "size": "Medidas",
+      "materials": "Materiales",
+      "year": "Año",
+      "price": "Precio"
+    }
+  },
+  "originals": {
+    "title": "Obras originales",
+    "intro": "Cada pintura nace en series pequeñas dentro de mi estudio lleno de luz. Las obras viajan aseguradas y embaladas con materiales de grado museístico.",
+    "inquireCta": "Consultar por esta pieza"
+  },
+  "about": {
+    "eyebrow": "Conoce a la artista",
+    "title": "Soy Natalia: pintora, viajera y coleccionista de color.",
+    "paragraph1": "Mi práctica habita la intersección entre intuición y estructura. Criada entre Buenos Aires y Madrid, me inspiro en la arquitectura, los textiles vintage y el ritmo de los rituales cotidianos.",
+    "paragraph2": "Cada pintura comienza como un campo de gestos - tintas, carbonilla, puntadas - y evoluciona a través de capas translúcidas de óleo y acrílico. Construyo superficies que invitan al tacto y recompensan la mirada cercana.",
+    "paragraph3": "He expuesto en Latinoamérica y Europa, y mis originales viven en colecciones privadas a ambos lados del Atlántico. El estudio está abierto con cita previa para coleccionistas y colaboradores.",
+    "practiceTitle": "Práctica de estudio",
+    "practiceDescription": "Lienzos de gran formato, obras sobre papel y encargos a medida realizados en series limitadas.",
+    "inspirationTitle": "Inspiración",
+    "inspirationDescription": "Fachadas desteñidas por el sol, formas botánicas, tipografía encontrada y noches llenas de música."
+  },
+  "contact": {
+    "eyebrow": "Ponte en contacto",
+    "title": "Creamos algo juntas",
+    "intro": "Para consultas de venta, colaboraciones o visitas al estudio, escríbeme mediante el formulario o por correo. Respondo cada mensaje en un máximo de dos días hábiles.",
+    "emailLabel": "Correo",
+    "emailValue": "hello@example.com",
+    "phoneLabel": "Teléfono",
+    "phoneValue": "+54 11 5555-1234",
+    "locationLabel": "Con base en",
+    "locationValue": "Buenos Aires y Madrid",
+    "form": {
+      "name": "Tu nombre",
+      "email": "Correo electrónico",
+      "message": "Cuéntame sobre tu proyecto",
+      "submit": "Enviar mensaje",
+      "success": "Gracias por tu mensaje. Te responderé muy pronto."
+    },
+    "details": {
+      "title": "Detalles del estudio",
+      "description": "Las visitas privadas al estudio se coordinan con cita previa. Escríbeme para agendar.",
+      "email": "Correo del estudio",
+      "phone": "Teléfono del estudio",
+      "location": "Ubicación del estudio",
+      "social": "Sigue el proceso"
+    }
+  },
+  "footer": {
+    "tagline": "Pinturas originales, creadas a mano para hogares contemporáneos y coleccionistas atentos.",
+    "copyright": "Copyright {{year}} Natalia Brugnoni. Todos los derechos reservados."
+  },
+  "meta": {
+    "homeTitle": "Natalia Brugnoni - Artista contemporánea",
+    "homeDescription": "Explora pinturas originales, conoce a la artista y coordina encargos o visitas al estudio.",
+    "originalsTitle": "Obras originales - Natalia Brugnoni",
+    "originalsDescription": "Revisa el catálogo completo de obras originales disponibles y coleccionadas de Natalia Brugnoni.",
+    "aboutTitle": "Sobre la artista - Natalia Brugnoni",
+    "aboutDescription": "Conoce a la artista contemporánea Natalia Brugnoni y descubre las historias detrás de su obra.",
+    "contactTitle": "Contacta el estudio - Natalia Brugnoni",
+    "contactDescription": "Escríbele a Natalia Brugnoni para consultas sobre obras, colaboraciones y visitas al estudio."
+  }
+}
