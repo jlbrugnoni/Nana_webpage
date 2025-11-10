@@ -5,13 +5,23 @@ type CarouselImage = {
   alt: string;
 };
 
+export type ImageCarouselVariant = 'default' | 'portrait';
+
 type ImageCarouselProps = {
   images: CarouselImage[];
   autoPlay?: boolean;
   interval?: number;
+  variant?: ImageCarouselVariant;
+  onImageClick?: (index: number) => void;
 };
 
-export default function ImageCarousel({ images, autoPlay = true, interval = 5500 }: ImageCarouselProps) {
+export default function ImageCarousel({
+  images,
+  autoPlay = true,
+  interval = 5500,
+  variant = 'default',
+  onImageClick,
+}: ImageCarouselProps) {
   const safeImages = useMemo(() => (images.length ? images : [{ src: '/hero.jpg', alt: 'Artwork' }]), [images]);
   const [index, setIndex] = useState(0);
 
@@ -28,23 +38,37 @@ export default function ImageCarousel({ images, autoPlay = true, interval = 5500
   const next = () => setIndex((current) => (current + 1) % safeImages.length);
   const prev = () => setIndex((current) => (current - 1 + safeImages.length) % safeImages.length);
 
+  const containerClasses =
+    variant === 'portrait'
+      ? 'relative w-full overflow-hidden rounded-3xl border border-gray-200 bg-white'
+      : 'relative w-full overflow-hidden rounded-2xl bg-gray-100';
+  const imageWrapClasses = variant === 'portrait' ? 'relative w-full' : 'relative h-72 sm:h-96';
+  const imageClasses =
+    variant === 'portrait'
+      ? 'h-full w-full object-cover'
+      : 'h-full w-full object-cover';
+  const aspectClasses = variant === 'portrait' ? 'aspect-[3/4]' : '';
+
   return (
-    <div className="relative w-full overflow-hidden rounded-2xl bg-gray-100">
-      <div className="relative h-72 sm:h-96">
+    <div className={containerClasses}>
+      <div className={`${imageWrapClasses} ${aspectClasses}`}>
         {safeImages.map((image, imageIndex) => (
-          <div
+          <button
             key={image.src}
+            type="button"
             className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
               imageIndex === index ? 'opacity-100' : 'pointer-events-none opacity-0'
             }`}
+            onClick={onImageClick ? () => onImageClick(imageIndex) : undefined}
+            aria-label={onImageClick ? `View image ${imageIndex + 1}` : undefined}
           >
             <img
               src={image.src}
               alt={image.alt}
-              className="h-full w-full object-cover"
+              className={imageClasses}
               loading={imageIndex === 0 ? 'eager' : 'lazy'}
             />
-          </div>
+          </button>
         ))}
       </div>
 

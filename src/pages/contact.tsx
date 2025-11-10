@@ -40,7 +40,7 @@ export default function ContactPage() {
       </Head>
 
       <Header />
-      <main className="bg-[#f8f6f1] pt-28">
+      <main className="bg-[#f8f6f1] pt-safe-header">
         <section className="mx-auto max-w-5xl px-4 pb-16">
           <div className="grid gap-10 md:grid-cols-[1.2fr_1fr]">
             <div className="rounded-3xl bg-white p-10 shadow-sm">

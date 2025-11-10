@@ -21,106 +21,148 @@ const remoteBase = 'https://images.unsplash.com';
 
 export const paintings: Painting[] = [
   {
-    id: 'golden-horizon',
+    id: 'andes-serenade',
     title: {
-      en: 'Golden Horizon',
-      es: 'Horizonte Dorado',
+      en: 'Andes Serenade',
+      es: 'Serenata Andina',
     },
     description: {
-      en: 'An exploration of warm light meeting the sea right before sunrise.',
-      es: 'Una exploración de la luz cálida que abraza el mar justo antes del amanecer.',
+      en: 'A warm cascade of light tracing ridgelines inspired by sunset drives through Mendoza.',
+      es: 'Una cálida cascada de luz que traza cordilleras inspiradas en atardeceres mendocinos.',
     },
-    size: '80 x 60 cm',
+    size: '90 x 70 cm',
     materials: {
-      en: 'Acrylic and gold leaf on canvas',
-      es: 'Acrílico y pan de oro sobre lienzo',
+      en: 'Acrylic, oil pastel, and gold leaf on canvas',
+      es: 'Acrílico, óleo pastel y pan de oro sobre lienzo',
     },
     year: 2024,
     status: 'available',
-    price: '$1,200',
+    price: '$1,600',
     images: [
       {
-        src: `${remoteBase}/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80`,
+        src: '/gallery/original1_a.png',
         alt: {
-          en: 'Golden Horizon painting - abstract sunrise tones.',
-          es: 'Pintura Horizonte Dorado - tonos abstractos de amanecer.',
+          en: 'Andes Serenade painting with luminous gold and terracotta bands.',
+          es: 'Pintura Serenata Andina con bandas luminosas de oro y terracota.',
         },
       },
       {
-        src: `${remoteBase}/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80`,
+        src: '/gallery/original1_b.png',
         alt: {
-          en: 'Detail of Golden Horizon brushwork.',
-          es: 'Detalle de las pinceladas de Horizonte Dorado.',
+          en: 'Detail of Andes Serenade showing layered brushwork and metallic sheen.',
+          es: 'Detalle de Serenata Andina mostrando capas de pinceladas y brillo metálico.',
         },
       },
     ],
   },
   {
-    id: 'midnight-garden',
+    id: 'rain-soaked-boulevard',
     title: {
-      en: 'Midnight Garden',
-      es: 'Jardín de Medianoche',
+      en: 'Rain-Soaked Boulevard',
+      es: 'Bulevar Bajo la Lluvia',
     },
     description: {
-      en: 'Botanical silhouettes revealed by moonlight in layered blues.',
-      es: 'Siluetas botánicas reveladas por la luna en capas de azules.',
+      en: 'Neon reflections and blurred silhouettes captured after a stormy night walk in Madrid.',
+      es: 'Reflejos de neón y siluetas difusas capturadas tras una noche lluviosa en Madrid.',
     },
-    size: '100 x 80 cm',
+    size: '80 x 65 cm',
     materials: {
       en: 'Oil on canvas',
       es: 'Óleo sobre lienzo',
     },
     year: 2023,
-    status: 'available',
+    status: 'sold',
     price: '$1,450',
     images: [
       {
-        src: `${remoteBase}/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80`,
+        src: '/gallery/original2_a.png',
         alt: {
-          en: 'Midnight Garden painting in blue palette.',
-          es: 'Pintura Jardín de Medianoche en paleta azul.',
-        },
-      },
-      {
-        src: `${remoteBase}/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80`,
-        alt: {
-          en: 'Close-up texture of Midnight Garden.',
-          es: 'Textura en detalle de Jardín de Medianoche.',
+          en: 'Rain-Soaked Boulevard painting with deep blues and city lights.',
+          es: 'Pintura Bulevar Bajo la Lluvia con azules profundos y luces urbanas.',
         },
       },
     ],
   },
   {
-    id: 'urban-dreams',
+    id: 'atlantic-orbit',
     title: {
-      en: 'Urban Dreams',
-      es: 'Sueños Urbanos',
+      en: 'Atlantic Orbit',
+      es: 'Órbita Atlántica',
     },
     description: {
-      en: 'Vibrant acrylic layers inspired by neon reflections on rainy streets.',
-      es: 'Capas vibrantes de acrílico inspiradas en reflejos de neón sobre calles lluviosas.',
+      en: 'Interlocking tidal forms and moon phases inspired by nights on the Galician coast.',
+      es: 'Formas de mareas y fases lunares entrelazadas inspiradas en noches en la costa gallega.',
     },
-    size: '90 x 70 cm',
+    size: '120 x 90 cm',
     materials: {
-      en: 'Acrylic and ink on canvas',
-      es: 'Acrílico y tinta sobre lienzo',
+      en: 'Mixed media on canvas',
+      es: 'Técnica mixta sobre lienzo',
     },
-    year: 2022,
-    status: 'sold',
-    price: '$980',
+    year: 2024,
+    status: 'available',
+    price: '$2,100',
     images: [
       {
-        src: `${remoteBase}/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80`,
+        src: '/gallery/original3_a.png',
         alt: {
-          en: 'Urban Dreams abstract cityscape.',
-          es: 'Paisaje urbano abstracto de Sueños Urbanos.',
+          en: 'Atlantic Orbit painting with concentric teal, coral, and navy forms.',
+          es: 'Pintura Órbita Atlántica con formas concéntricas en verde azulado, coral y azul marino.',
         },
       },
       {
-        src: `${remoteBase}/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80`,
+        src: '/gallery/original3_b.png',
         alt: {
-          en: 'Detail of Urban Dreams color transitions.',
-          es: 'Detalle de las transiciones de color de Sueños Urbanos.',
+          en: 'Detail of Atlantic Orbit showing layered glazes and ink marks.',
+          es: 'Detalle de Órbita Atlántica con veladuras y trazos de tinta.',
+        },
+      },
+      {
+        src: '/gallery/original3_c.png',
+        alt: {
+          en: 'Atlantic Orbit viewed in studio with soft daylight.',
+          es: 'Órbita Atlántica en el estudio con luz diurna suave.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'patagonia-whisper',
+    title: {
+      en: 'Patagonia Whisper',
+      es: 'Susurro Patagónico',
+    },
+    description: {
+      en: 'Delicate glacier blues and earthy siennas layered to echo the quiet of El Chaltén.',
+      es: 'Azules glaciales y sienas terrosas en capas que evocan el silencio de El Chaltén.',
+    },
+    size: '110 x 80 cm',
+    materials: {
+      en: 'Acrylic, charcoal, and pencil on canvas',
+      es: 'Acrílico, carboncillo y grafito sobre lienzo',
+    },
+    year: 2022,
+    status: 'available',
+    price: '$1,850',
+    images: [
+      {
+        src: '/gallery/original4_a.png',
+        alt: {
+          en: 'Patagonia Whisper painting with icy blues and drifting lines.',
+          es: 'Pintura Susurro Patagónico con azules helados y líneas flotantes.',
+        },
+      },
+      {
+        src: '/gallery/original4_b.png',
+        alt: {
+          en: 'Detail of Patagonia Whisper showing delicate graphite marks.',
+          es: 'Detalle de Susurro Patagónico con marcas delicadas de grafito.',
+        },
+      },
+      {
+        src: '/gallery/original4_c.png',
+        alt: {
+          en: 'Patagonia Whisper styled on a neutral wall with natural light.',
+          es: 'Susurro Patagónico en una pared neutra con luz natural.',
         },
       },
     ],

@@ -8,14 +8,15 @@
     "closeMenu": "Cerrar navegación"
   },
   "site": {
-    "masthead": "N. ART STUDIO"
+    "masthead": "ADRI BRU"
   },
   "hero": {
     "eyebrow": "Arte original",
     "headline": "Historias vibrantes pintadas a mano",
     "description": "Creo pinturas táctiles y llenas de color que invitan a pausar, respirar y sentir. Cada pieza nace de un proceso lento e intencional para espacios íntimos que celebran la luz.",
     "cta": "Ver originales",
-    "supporting": "Envíos a todo el mundo"
+    "supporting": "Envíos a todo el mundo",
+    "artistName": "Adri Brugnoni"
   },
   "featured": {
     "eyebrow": "Nueva colección",
@@ -48,8 +49,8 @@
   },
   "about": {
     "eyebrow": "Conoce a la artista",
-    "title": "Soy Natalia: pintora, viajera y coleccionista de color.",
-    "paragraph1": "Mi práctica habita la intersección entre intuición y estructura. Criada entre Buenos Aires y Madrid, me inspiro en la arquitectura, los textiles vintage y el ritmo de los rituales cotidianos.",
+    "title": "Soy Adriana: pintora, viajera y coleccionista de color.",
+    "paragraph1": "Mi práctica habita la intersección entre intuición y estructura. Criada entre Colombia, España y República Dominicana, me inspiro en la arquitectura, los textiles vintage y el ritmo de los rituales cotidianos.",
     "paragraph2": "Cada pintura comienza como un campo de gestos - tintas, carbonilla, puntadas - y evoluciona a través de capas translúcidas de óleo y acrílico. Construyo superficies que invitan al tacto y recompensan la mirada cercana.",
     "paragraph3": "He expuesto en Latinoamérica y Europa, y mis originales viven en colecciones privadas a ambos lados del Atlántico. El estudio está abierto con cita previa para coleccionistas y colaboradores.",
     "practiceTitle": "Práctica de estudio",
@@ -66,7 +67,7 @@
     "phoneLabel": "Teléfono",
     "phoneValue": "+54 11 5555-1234",
     "locationLabel": "Con base en",
-    "locationValue": "Buenos Aires y Madrid",
+    "locationValue": "Estepona, España",
     "form": {
       "name": "Tu nombre",
       "email": "Correo electrónico",
@@ -85,16 +86,16 @@
   },
   "footer": {
     "tagline": "Pinturas originales, creadas a mano para hogares contemporáneos y coleccionistas atentos.",
-    "copyright": "Copyright {{year}} Natalia Brugnoni. Todos los derechos reservados."
+    "copyright": "Copyright {{year}} Adri Brugnoni. Todos los derechos reservados."
   },
   "meta": {
-    "homeTitle": "Natalia Brugnoni - Artista contemporánea",
+    "homeTitle": "Adri Brugnoni - Artista contemporánea",
     "homeDescription": "Explora pinturas originales, conoce a la artista y coordina encargos o visitas al estudio.",
-    "originalsTitle": "Obras originales - Natalia Brugnoni",
-    "originalsDescription": "Revisa el catálogo completo de obras originales disponibles y coleccionadas de Natalia Brugnoni.",
-    "aboutTitle": "Sobre la artista - Natalia Brugnoni",
-    "aboutDescription": "Conoce a la artista contemporánea Natalia Brugnoni y descubre las historias detrás de su obra.",
-    "contactTitle": "Contacta el estudio - Natalia Brugnoni",
-    "contactDescription": "Escríbele a Natalia Brugnoni para consultas sobre obras, colaboraciones y visitas al estudio."
+    "originalsTitle": "Obras originales - Adri Brugnoni",
+    "originalsDescription": "Revisa el catálogo completo de obras originales disponibles y coleccionadas de Adri Brugnoni.",
+    "aboutTitle": "Sobre la artista - Adri Brugnoni",
+    "aboutDescription": "Conoce a la artista contemporánea Adri Brugnoni y descubre las historias detrás de su obra.",
+    "contactTitle": "Contacta el estudio - Adri Brugnoni",
+    "contactDescription": "Escríbele a Adri Brugnoni para consultas sobre obras, colaboraciones y visitas al estudio."
   }
 }

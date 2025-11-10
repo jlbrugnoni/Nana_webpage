@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --header-height: 96px;
+  --header-offset: calc(var(--header-height) + 24px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,4 +48,8 @@ body {
   color: #1f2933;
   font-family: 'Gotham', sans-serif;
   background-color: #f8f6f1;
+}
+
+.pt-safe-header {
+  padding-top: var(--header-offset);
 }

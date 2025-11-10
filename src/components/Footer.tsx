@@ -8,7 +8,7 @@ export default function Footer() {
   const location = t('contact.locationValue');
 
   return (
-    <footer className="mt-20 border-t border-gray-200 bg-white/80">
+    <footer className="border-t border-gray-200 bg-white/80">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-12 text-center md:flex-row md:items-center md:justify-between md:text-left">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-gray-500">{t('site.masthead')}</p>

@@ -8,14 +8,15 @@
     "closeMenu": "Close navigation"
   },
   "site": {
-    "masthead": "N. ART STUDIO"
+    "masthead": "ADRI BRU"
   },
   "hero": {
     "eyebrow": "Original Fine Art",
     "headline": "Color-soaked stories painted by hand",
     "description": "I craft vibrant, tactile paintings that invite you to pause, breathe, and feel. Each piece is made slowly and intentionally for intimate spaces that celebrate light.",
     "cta": "View originals",
-    "supporting": "Worldwide shipping available"
+    "supporting": "Worldwide shipping available",
+    "artistName": "Adri Brugnoni"
   },
   "featured": {
     "eyebrow": "New Collection",
@@ -48,8 +49,8 @@
   },
   "about": {
     "eyebrow": "Meet the artist",
-    "title": "Hi, I'm Natalia - painter, traveler, collector of color.",
-    "paragraph1": "My practice lives at the intersection of intuition and structure. Raised between Buenos Aires and Madrid, I draw inspiration from architecture, vintage textiles, and the rhythm of everyday rituals.",
+    "title": "Hi, I'm Adriana - painter, traveler, collector of color.",
+    "paragraph1": "My practice lives at the intersection of intuition and structure. Raised between Colombia, Spain and Dominican Republic, I draw inspiration from architecture, vintage textiles, and the rhythm of everyday rituals.",
     "paragraph2": "Each painting begins as a field of gestures - inks, charcoal, stitched marks - and evolves through translucent layers of oil and acrylic. I build surfaces that invite touch and reward close looking.",
     "paragraph3": "I have exhibited in Latin America and Europe, and my originals live in private collections across both continents. My studio is open by appointment for collectors and collaborators.",
     "practiceTitle": "Studio practice",
@@ -66,7 +67,7 @@
     "phoneLabel": "Phone",
     "phoneValue": "+1 (555) 123-4567",
     "locationLabel": "Based in",
-    "locationValue": "Buenos Aires & Madrid",
+    "locationValue": "Estepona, Spain",
     "form": {
       "name": "Your name",
       "email": "Email address",
@@ -85,16 +86,16 @@
   },
   "footer": {
     "tagline": "Original paintings, crafted by hand for modern homes and thoughtful collectors.",
-    "copyright": "Copyright {{year}} Natalia Brugnoni. All rights reserved."
+    "copyright": "Copyright {{year}} Adri Brugnoni. All rights reserved."
   },
   "meta": {
-    "homeTitle": "Natalia Brugnoni - Contemporary Artist",
+    "homeTitle": "Adri Brugnoni - Contemporary Artist",
     "homeDescription": "Explore original paintings, learn about the artist, and connect for commissions or studio visits.",
-    "originalsTitle": "Original Paintings - Natalia Brugnoni",
-    "originalsDescription": "Browse the full catalogue of available and collected original paintings by Natalia Brugnoni.",
-    "aboutTitle": "About the Artist - Natalia Brugnoni",
-    "aboutDescription": "Meet contemporary artist Natalia Brugnoni and discover the stories behind her work.",
-    "contactTitle": "Contact the Studio - Natalia Brugnoni",
-    "contactDescription": "Reach out to Natalia Brugnoni for artwork inquiries, collaborations, and studio visits."
+    "originalsTitle": "Original Paintings - Adri Brugnoni",
+    "originalsDescription": "Browse the full catalogue of available and collected original paintings by Adri Brugnoni.",
+    "aboutTitle": "About the Artist - Adri Brugnoni",
+    "aboutDescription": "Meet contemporary artist Adri Brugnoni and discover the stories behind her work.",
+    "contactTitle": "Contact the Studio - Adri Brugnoni",
+    "contactDescription": "Reach out to Adri Brugnoni for artwork inquiries, collaborations, and studio visits."
   }
 }

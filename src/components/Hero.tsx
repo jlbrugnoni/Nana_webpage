@@ -1,44 +1,38 @@
-import { useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
-import ImageCarousel from './ImageCarousel';
-import { paintings } from '@/data/paintings';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
-  const { t, i18n } = useTranslation('common');
-  const language = i18n.language || 'en';
+  const { t } = useTranslation('common');
+  const images = ['/gallery/hero1.jpg', '/gallery/hero2.jpg', '/gallery/hero3.jpg'];
+  const [index, setIndex] = useState(0);
 
-  const slides = useMemo(
-    () =>
-      paintings.slice(0, 3).map((painting) => ({
-        src: painting.images[0]?.src ?? '/hero.jpg',
-        alt: painting.images[0]?.alt[language] ?? painting.title[language] ?? painting.title.en,
-      })),
-    [language]
-  );
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setIndex((current) => (current + 1) % images.length);
+    }, 6000);
+    return () => window.clearInterval(id);
+  }, [images.length]);
 
   return (
-    <section id="hero" className="relative pt-28 pb-16">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:items-center">
-        <div className="md:w-1/2">
-          <p className="text-xs uppercase tracking-[0.4em] text-gray-500">{t('hero.eyebrow')}</p>
-          <h1 className="mt-4 text-4xl font-semibold leading-tight text-gray-900 sm:text-5xl">
-            {t('hero.headline')}
-          </h1>
-          <p className="mt-6 text-base text-gray-600 sm:text-lg">{t('hero.description')}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href="/originals"
-              className="inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-sm font-medium uppercase tracking-[0.3em] text-white transition hover:bg-gray-700"
-            >
-              {t('hero.cta')}
-            </a>
-            <span className="text-sm text-gray-500">{t('hero.supporting')}</span>
-          </div>
+    <section id="hero" className="relative h-[80vh] min-h-[520px] overflow-hidden">
+      {images.map((src, imageIndex) => (
+        <div
+          key={src}
+          className={`absolute inset-0 transition-opacity duration-[1500ms] ${
+            imageIndex === index ? 'opacity-100' : 'pointer-events-none opacity-0'
+          }`}
+        >
+          <img src={src} alt="" className="h-full w-full object-cover" loading={imageIndex === 0 ? 'eager' : 'lazy'} />
         </div>
+      ))}
 
-        <div className="md:w-1/2">
-          <ImageCarousel images={slides} />
-        </div>
+      <div
+        className="relative z-10 flex h-full w-full items-center justify-center px-4 text-center"
+        style={{ paddingTop: 'var(--header-height)' }}
+      >
+        <h1 className="text-5xl font-semibold uppercase tracking-[0.6em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.35)] sm:text-6xl md:text-7xl">
+          {t('Adri Bru')}
+        </h1>
       </div>
     </section>
   );
