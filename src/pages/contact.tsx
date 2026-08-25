@@ -142,7 +142,7 @@ export default function ContactPage() {
                 </h3>
                 <ul className="mt-2 space-y-1">
                   <li>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="underline">
+                    <a href="https://www.instagram.com/byadribru/" target="_blank" rel="noopener noreferrer" className="underline">
                       Instagram
                     </a>
                   </li>
@@ -174,4 +174,3 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     },
   };
 };
-

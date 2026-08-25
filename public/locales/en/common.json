@@ -10,6 +10,10 @@
   "site": {
     "masthead": "ADRI BRU"
   },
+  "construction": {
+    "message": "Page under construction",
+    "metaTitle": "Page under construction - Adri Bru"
+  },
   "hero": {
     "eyebrow": "Original Fine Art",
     "headline": "Color-soaked stories painted by hand",
@@ -63,9 +67,9 @@
     "title": "Let's create something together",
     "intro": "For sales inquiries, collaborations, or studio visits, reach out using the form or via email. I respond to every message within two business days.",
     "emailLabel": "Email",
-    "emailValue": "hello@example.com",
+    "emailValue": "info@adribru.com",
     "phoneLabel": "Phone",
-    "phoneValue": "+1 (555) 123-4567",
+    "phoneValue": "+34 616 08 88 72",
     "locationLabel": "Based in",
     "locationValue": "Estepona, Spain",
     "form": {

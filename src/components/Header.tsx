@@ -40,23 +40,27 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useTranslation } from 'next-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import { siteFeatures } from '@/config/site';
 
 const NAV_ITEMS = [
   { href: '/', labelKey: 'nav.home' },
-  { href: '/originals', labelKey: 'nav.originals' },
+  ...(siteFeatures.originals ? [{ href: '/originals', labelKey: 'nav.originals' }] : []),
   { href: '/about', labelKey: 'nav.about' },
   { href: '/contact', labelKey: 'nav.contact' },
-];
-
-const SOCIAL_LINKS = [
-  { icon: 'instagram', href: 'https://www.instagram.com', label: 'Instagram' },
-  { icon: 'facebook', href: 'https://www.facebook.com', label: 'Facebook' },
-  { icon: 'whatsapp', href: 'https://wa.me/15551234567', label: 'WhatsApp' },
 ];
 
 export default function Header() {
   const { t } = useTranslation('common');
   const router = useRouter();
+  const phone = t('contact.phoneValue');
+  const whatsappNumber = phone.replace(/[^\d]/g, '');
+  const socialLinks = [
+    { icon: 'instagram', href: 'https://www.instagram.com/byadribru/', label: 'Instagram' },
+    ...(siteFeatures.facebook
+      ? [{ icon: 'facebook', href: 'https://www.facebook.com', label: 'Facebook' }]
+      : []),
+    { icon: 'whatsapp', href: `https://wa.me/${whatsappNumber}`, label: 'WhatsApp' },
+  ];
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
@@ -99,7 +103,7 @@ export default function Header() {
     >
       <nav className="flex w-full items-center px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <div className="hidden flex-1 items-center justify-start gap-3 lg:flex">
-          {SOCIAL_LINKS.map((item) => (
+          {socialLinks.map((item) => (
             <a
               key={item.icon}
               href={item.href}

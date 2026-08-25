@@ -10,6 +10,10 @@
   "site": {
     "masthead": "ADRI BRU"
   },
+  "construction": {
+    "message": "Página en construcción",
+    "metaTitle": "Página en construcción - Adri Bru"
+  },
   "hero": {
     "eyebrow": "Arte original",
     "headline": "Historias vibrantes pintadas a mano",
@@ -63,9 +67,9 @@
     "title": "Creamos algo juntas",
     "intro": "Para consultas de venta, colaboraciones o visitas al estudio, escríbeme mediante el formulario o por correo. Respondo cada mensaje en un máximo de dos días hábiles.",
     "emailLabel": "Correo",
-    "emailValue": "hello@example.com",
+    "emailValue": "info@adribru.com",
     "phoneLabel": "Teléfono",
-    "phoneValue": "+54 11 5555-1234",
+    "phoneValue": "+34 616 08 88 72",
     "locationLabel": "Con base en",
     "locationValue": "Estepona, España",
     "form": {

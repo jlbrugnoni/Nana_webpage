@@ -1,4 +1,5 @@
 import { useTranslation } from 'next-i18next';
+import { siteFeatures } from '@/config/site';
 
 export default function Footer() {
   const { t } = useTranslation('common');
@@ -34,15 +35,19 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-gray-900">
+          <a href="https://www.instagram.com/byadribru/" target="_blank" rel="noopener noreferrer" className="transition hover:text-gray-900">
             Instagram
           </a>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-gray-900">
-            Facebook
-          </a>
-          <a href="https://www.etsy.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-gray-900">
-            Etsy
-          </a>
+          {siteFeatures.facebook && (
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-gray-900">
+              Facebook
+            </a>
+          )}
+          {siteFeatures.etsy && (
+            <a href="https://www.etsy.com" target="_blank" rel="noopener noreferrer" className="transition hover:text-gray-900">
+              Etsy
+            </a>
+          )}
         </div>
       </div>
 

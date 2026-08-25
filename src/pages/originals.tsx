@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { siteFeatures } from '@/config/site';
 import { useTranslation } from 'next-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -125,6 +126,10 @@ export default function OriginalsPage() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  if (!siteFeatures.originals) {
+    return { notFound: true };
+  }
+
   return {
     props: {
       ...(await serverSideTranslations(locale ?? 'en', ['common'])),
@@ -196,4 +201,3 @@ function Lightbox({ painting, startIndex, onClose, getCopy }: LightboxProps) {
     </div>
   );
 }
-
