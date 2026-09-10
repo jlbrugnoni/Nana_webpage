@@ -17,7 +17,7 @@ All temporary visibility settings are in `src/config/site.ts`:
 export const siteFeatures = {
   underConstruction: false,
   originals: true,
-  artworkOrderingControls: true,
+  artworkOrderingControls: false,
   facebook: false,
   etsy: false,
 } as const;
@@ -25,8 +25,8 @@ export const siteFeatures = {
 
 - `underConstruction`: Set to `true` to show the temporary page, or `false` to show the complete website.
 - `originals`: Currently `true`, which shows its navigation item and makes `/originals` available. Set it to `false` to hide both.
-- `artworkOrderingControls`: Temporarily shows up/down buttons on the Originals page and saves the chosen order in the current browser's local storage. Once the order is approved, update `artworkFiles` and `catalogDetails` in `src/data/paintings.ts` to match it, then set this flag to `false`.
-- The homepage Featured Originals section reads the same temporary browser order and displays its first three works. Once the final order is baked into `src/data/paintings.ts`, it will naturally use the first three permanent records.
+- `artworkOrderingControls`: Currently `false`. Setting it to `true` temporarily shows up/down buttons and saves a draft order in the current browser's local storage. Any approved order must then be copied into `artworkFiles` and `catalogDetails` before turning the flag off again.
+- The approved artwork order is permanently stored in `src/data/paintings.ts`. The homepage displays the first three permanent records: Los dos con sombreros, El mar por dentro, and Yo te protejo.
 - `facebook`: Set to `true` only after replacing the provisional Facebook URL with the artist's real profile.
 - `etsy`: Set to `true` only after replacing the provisional Etsy URL with the artist's real shop.
 

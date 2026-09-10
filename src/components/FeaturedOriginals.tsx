@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
 import { paintings, Painting } from '@/data/paintings';
+import { siteFeatures } from '@/config/site';
 
 export default function FeaturedOriginals() {
   const { t, i18n } = useTranslation('common');
@@ -10,6 +11,8 @@ export default function FeaturedOriginals() {
   const [featured, setFeatured] = useState(paintings.slice(0, 3));
 
   useEffect(() => {
+    if (!siteFeatures.artworkOrderingControls) return;
+
     const savedOrder = window.localStorage.getItem('adri-bru-artwork-order');
     if (!savedOrder) return;
 
