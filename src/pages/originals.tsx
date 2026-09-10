@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -15,8 +15,42 @@ export default function OriginalsPage() {
   const email = t('contact.emailValue');
   const [activePaintingId, setActivePaintingId] = useState<string | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [orderedPaintings, setOrderedPaintings] = useState(paintings);
 
   const getCopy = (copy: Record<string, string>) => copy[language] ?? copy.en;
+
+  useEffect(() => {
+    if (!siteFeatures.artworkOrderingControls) return;
+
+    const savedOrder = window.localStorage.getItem('adri-bru-artwork-order');
+    if (!savedOrder) return;
+
+    try {
+      const ids = JSON.parse(savedOrder) as string[];
+      const byId = new Map(paintings.map((painting) => [painting.id, painting]));
+      const restored = ids.map((id) => byId.get(id)).filter((painting): painting is Painting => Boolean(painting));
+      const missing = paintings.filter((painting) => !ids.includes(painting.id));
+
+      if (restored.length) setOrderedPaintings([...restored, ...missing]);
+    } catch {
+      window.localStorage.removeItem('adri-bru-artwork-order');
+    }
+  }, []);
+
+  const movePainting = (index: number, direction: -1 | 1) => {
+    setOrderedPaintings((current) => {
+      const destination = index + direction;
+      if (destination < 0 || destination >= current.length) return current;
+
+      const reordered = [...current];
+      [reordered[index], reordered[destination]] = [reordered[destination], reordered[index]];
+      window.localStorage.setItem(
+        'adri-bru-artwork-order',
+        JSON.stringify(reordered.map((painting) => painting.id))
+      );
+      return reordered;
+    });
+  };
 
   return (
     <>
@@ -34,7 +68,7 @@ export default function OriginalsPage() {
           </div>
 
           <div className="mt-12 divide-y divide-gray-300 border-y border-gray-300">
-            {paintings.map((painting) => {
+            {orderedPaintings.map((painting, index) => {
               const statusKey = `paintings.status.${painting.status}` as const;
               return (
                 <article
@@ -59,9 +93,32 @@ export default function OriginalsPage() {
 
                     <div className="flex flex-1 flex-col gap-6 md:py-6 lg:py-8">
                       <div>
-                        <p className="text-xs uppercase tracking-[0.4em] text-gray-500">{t(statusKey)}</p>
+                        <div className="flex items-center justify-between gap-4">
+                          <p className="text-xs uppercase tracking-[0.4em] text-gray-500">{t(statusKey)}</p>
+                          {siteFeatures.artworkOrderingControls && (
+                            <div className="flex gap-2" aria-label={t('originals.orderControls')}>
+                              <button
+                                type="button"
+                                onClick={() => movePainting(index, -1)}
+                                disabled={index === 0}
+                                aria-label={t('originals.moveUp', { title: getCopy(painting.title) })}
+                                className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-400 text-lg text-gray-700 transition hover:bg-gray-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-25"
+                              >
+                                ↑
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => movePainting(index, 1)}
+                                disabled={index === orderedPaintings.length - 1}
+                                aria-label={t('originals.moveDown', { title: getCopy(painting.title) })}
+                                className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-400 text-lg text-gray-700 transition hover:bg-gray-900 hover:text-white disabled:cursor-not-allowed disabled:opacity-25"
+                              >
+                                ↓
+                              </button>
+                            </div>
+                          )}
+                        </div>
                         <h2 className="mt-2 text-2xl font-semibold text-gray-900">{getCopy(painting.title)}</h2>
-                        <p className="mt-3 text-sm text-gray-600">{getCopy(painting.description)}</p>
                       </div>
 
                       <dl className="grid grid-cols-1 gap-4 text-sm text-gray-700 sm:grid-cols-2">
@@ -90,6 +147,9 @@ export default function OriginalsPage() {
                           <dd className="mt-1">
                             {painting.status === 'available' ? painting.price : t('paintings.status.sold')}
                           </dd>
+                          {painting.status === 'available' && painting.priceNote && (
+                            <dd className="mt-1 text-xs leading-5 text-gray-500">{getCopy(painting.priceNote)}</dd>
+                          )}
                         </div>
                       </dl>
 
@@ -208,7 +268,6 @@ function Lightbox({ painting, startIndex, onClose, getCopy }: LightboxProps) {
 
         <div className="text-center text-white">
           <h2 className="text-2xl font-semibold uppercase tracking-[0.3em]">{getCopy(painting.title)}</h2>
-          <p className="mt-2 text-sm text-white/80">{getCopy(painting.description)}</p>
         </div>
       </div>
     </div>

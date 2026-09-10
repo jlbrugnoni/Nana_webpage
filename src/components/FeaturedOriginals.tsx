@@ -1,13 +1,28 @@
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
-import { useMemo } from 'react';
-import { paintings } from '@/data/paintings';
+import { useEffect, useState } from 'react';
+import { paintings, Painting } from '@/data/paintings';
 
 export default function FeaturedOriginals() {
   const { t, i18n } = useTranslation('common');
   const language = i18n.language || 'en';
 
-  const featured = useMemo(() => paintings.slice(0, 3), []);
+  const [featured, setFeatured] = useState(paintings.slice(0, 3));
+
+  useEffect(() => {
+    const savedOrder = window.localStorage.getItem('adri-bru-artwork-order');
+    if (!savedOrder) return;
+
+    try {
+      const ids = JSON.parse(savedOrder) as string[];
+      const byId = new Map(paintings.map((painting) => [painting.id, painting]));
+      const restored = ids.map((id) => byId.get(id)).filter((painting): painting is Painting => Boolean(painting));
+      const missing = paintings.filter((painting) => !ids.includes(painting.id));
+      setFeatured([...restored, ...missing].slice(0, 3));
+    } catch {
+      window.localStorage.removeItem('adri-bru-artwork-order');
+    }
+  }, []);
 
   return (
     <section className="bg-white py-16">
@@ -29,7 +44,6 @@ export default function FeaturedOriginals() {
         <div className="mt-12 divide-y divide-gray-300 border-y border-gray-300">
           {featured.map((painting) => {
             const title = painting.title[language] ?? painting.title.en;
-            const description = painting.description[language] ?? painting.description.en;
             const statusKey = `paintings.status.${painting.status}` as const;
 
             return (
@@ -49,7 +63,6 @@ export default function FeaturedOriginals() {
                 <div>
                   <p className="text-xs uppercase tracking-[0.35em] text-gray-500">{t(statusKey)}</p>
                   <h3 className="mt-3 text-2xl font-semibold text-gray-900">{title}</h3>
-                  <p className="mt-4 max-w-xl text-sm leading-6 text-gray-600">{description}</p>
                   <div className="mt-6 flex max-w-sm items-center justify-between border-t border-gray-300 pt-4 text-sm text-gray-700">
                     <span>{painting.size}</span>
                     {painting.status === 'available' ? (

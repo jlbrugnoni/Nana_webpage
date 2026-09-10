@@ -11,6 +11,7 @@ export type Painting = {
   year: number;
   status: PaintingStatus;
   price: string;
+  priceNote?: LocalizedCopy;
   images: {
     src: string;
     alt: LocalizedCopy;
@@ -37,10 +38,14 @@ const artworkFiles = [
   'originals_013.png',
   'originals_018.png',
   'originals_019.png',
-  'originals_020.jpg',
+  'originals_020.png',
   'originals_021.png',
   'originals_022.png',
   'originals_023.png',
+  'originals_024.png',
+  'originals_025.png',
+  'originals_026.png',
+  'originals_027.png',
 ] as const;
 
 type CatalogDetails = {
@@ -49,14 +54,15 @@ type CatalogDetails = {
   materials: LocalizedCopy;
   year: number;
   price: string;
+  priceNote?: LocalizedCopy;
   status?: PaintingStatus;
 };
 
 const catalogDetails: CatalogDetails[] = [
-  { title: { en: 'Untitled', es: 'Sin título' }, size: '50 × 60 cm', materials: { en: 'Mixed media on cardboard', es: 'Técnica mixta sobre cartón' }, year: 2025, price: '€600' },
-  { title: { en: 'Untitled', es: 'Sin título' }, size: 'Por confirmar / To be confirmed', materials: { en: 'Black ink on lightweight cardstock', es: 'Tinta negra sobre cartulina fina' }, year: 2025, price: '€220' },
-  { title: { en: 'Untitled', es: 'Sin título' }, size: '30 × 21 cm', materials: { en: 'Black ink on cotton paper', es: 'Tinta negra sobre papel de algodón' }, year: 2025, price: '€250' },
-  { title: { en: 'Untitled', es: 'Sin título' }, size: '30 × 21 cm', materials: { en: 'Black ink on cotton paper', es: 'Tinta negra sobre papel de algodón' }, year: 2026, price: '€250', status: 'sold' },
+  { title: { en: 'Aura', es: 'Aura' }, size: '50 × 60 cm', materials: { en: 'Mixed media on cardboard', es: 'Técnica mixta sobre cartón' }, year: 2025, price: '€600' },
+  { title: { en: 'Fragment of a Face 1', es: 'Fragmento de un rostro 1' }, size: 'Por confirmar / To be confirmed', materials: { en: 'Black ink on lightweight cardstock', es: 'Tinta negra sobre cartulina fina' }, year: 2025, price: '€220' },
+  { title: { en: 'Fragment of a Face 2', es: 'Fragmento de un rostro 2' }, size: '30 × 21 cm', materials: { en: 'Black ink on cotton paper', es: 'Tinta negra sobre papel de algodón' }, year: 2025, price: '€250' },
+  { title: { en: 'Fragment of a Face 3', es: 'Fragmento de un rostro 3' }, size: '30 × 21 cm', materials: { en: 'Black ink on cotton paper', es: 'Tinta negra sobre papel de algodón' }, year: 2026, price: '€250', status: 'sold' },
   { title: { en: 'P1 · Parts of Me Series', es: 'P1 · Serie Partes de Mí' }, size: '30 × 40 cm', materials: { en: 'Acrylic on cotton paper', es: 'Acrílico sobre papel de algodón' }, year: 2025, price: '€350' },
   { title: { en: 'P2 · Parts of Me Series', es: 'P2 · Serie Partes de Mí' }, size: '30 × 40 cm', materials: { en: 'Acrylic on cotton paper', es: 'Acrílico sobre papel de algodón' }, year: 2025, price: '€350' },
   { title: { en: 'P3 · Parts of Me Series', es: 'P3 · Serie Partes de Mí' }, size: '30 × 40 cm', materials: { en: 'Acrylic on cotton paper', es: 'Acrílico sobre papel de algodón' }, year: 2025, price: '€350' },
@@ -71,11 +77,15 @@ const catalogDetails: CatalogDetails[] = [
   { title: { en: 'Face 4 · Faces I Series', es: 'Rostro 4 · Serie Rostros I' }, size: '30 × 40 cm', materials: { en: 'Acrylic on cotton paper', es: 'Acrílico sobre papel de algodón' }, year: 2025, price: '€350' },
   { title: { en: 'Face 5 · Faces I Series', es: 'Rostro 5 · Serie Rostros I' }, size: '30 × 40 cm', materials: { en: 'Acrylic on cotton paper', es: 'Acrílico sobre papel de algodón' }, year: 2025, price: '€350' },
   { title: { en: 'The Sea Within', es: 'El mar por dentro' }, size: '44 × 31.5 cm (marco flotante / floating frame)', materials: { en: 'Acrylic on canvas', es: 'Acrílico sobre lienzo' }, year: 2026, price: '€750' },
-  { title: { en: 'Untitled', es: 'Sin título' }, size: '99 × 156 cm', materials: { en: 'Mixed media on kraft paper', es: 'Técnica mixta sobre papel kraft' }, year: 2026, price: '€2,400' },
+  { title: { en: 'Paper Sailor', es: 'Marinero de papel' }, size: '99 × 156 cm', materials: { en: 'Mixed media on kraft paper', es: 'Técnica mixta sobre papel kraft' }, year: 2026, price: '€2,400' },
   { title: { en: 'Dear Me', es: 'Querida yo' }, size: '96 × 58 cm aprox.', materials: { en: 'Mixed media on cardboard', es: 'Técnica mixta sobre cartón' }, year: 2025, price: '€800' },
   { title: { en: 'Blue Moon', es: 'Luna azul' }, size: 'Ø 45 cm', materials: { en: 'Acrylic and acrylic marker on circular support', es: 'Acrílico y rotulador acrílico sobre soporte circular' }, year: 2024, price: '€650' },
   { title: { en: 'The Two with Hats', es: 'Los dos con sombreros' }, size: '114 × 99 cm', materials: { en: 'Acrylic paint on canvas', es: 'Pintura acrílica sobre lienzo' }, year: 2025, price: '€2,800' },
   { title: { en: 'I Protect You', es: 'Yo te protejo' }, size: '50 × 71 cm', materials: { en: 'Mixed media on canvas', es: 'Técnica mixta sobre lienzo' }, year: 2025, price: '€950' },
+  { title: { en: 'When We Coincide', es: 'Cuando coincidimos' }, size: '120 × 160 cm', materials: { en: 'Mixed media on kraft paper', es: 'Técnica mixta sobre papel kraft' }, year: 2026, price: '€2,500' },
+  { title: { en: 'Simone', es: 'Simone' }, size: '120 × 120 cm', materials: { en: 'Acrylic on canvas', es: 'Acrílico sobre lienzo' }, year: 2022, price: '', status: 'sold' },
+  { title: { en: 'Diptych · Part 1', es: 'Díptico · Parte 1' }, size: '16 × 26 cm', materials: { en: 'Acrylic and acrylic marker on recycled cardboard', es: 'Acrílico y rotulador acrílico sobre cartón reciclado' }, year: 2024, price: '€520', priceNote: { en: 'Price for both pieces; also available separately', es: 'Precio por las dos piezas; también disponibles por separado' } },
+  { title: { en: 'Diptych · Part 2', es: 'Díptico · Parte 2' }, size: '16 × 26 cm', materials: { en: 'Acrylic and acrylic marker on recycled cardboard', es: 'Acrílico y rotulador acrílico sobre cartón reciclado' }, year: 2024, price: '€520', priceNote: { en: 'Price for both pieces; also available separately', es: 'Precio por las dos piezas; también disponibles por separado' } },
 ];
 
 const placeholderDescriptions: LocalizedCopy[] = [
@@ -171,6 +181,10 @@ const placeholderDescriptions: LocalizedCopy[] = [
     en: 'Two figures meet in a protective gesture, using expressive lines and layered color to evoke closeness, care, and quiet strength.',
     es: 'Dos figuras se encuentran en un gesto protector, donde las líneas expresivas y las capas de color evocan cercanía, cuidado y una fuerza serena.',
   },
+  { en: '', es: '' },
+  { en: '', es: '' },
+  { en: '', es: '' },
+  { en: '', es: '' },
 ];
 
 export const paintings: Painting[] = artworkFiles.map((fileName, index) => {
@@ -186,6 +200,7 @@ export const paintings: Painting[] = artworkFiles.map((fileName, index) => {
     year: details.year,
     status: details.status ?? 'available',
     price: details.price,
+    priceNote: details.priceNote,
     images: [
       {
         src: `/gallery/${fileName}`,

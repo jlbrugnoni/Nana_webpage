@@ -48,8 +48,11 @@
   },
   "originals": {
     "title": "Obras originales",
-    "intro": "Cada pintura nace en series pequeñas dentro de mi estudio lleno de luz. Las obras viajan aseguradas y embaladas con materiales de grado museístico.",
+    "intro": "Una selección rotativa de obras disponibles en el estudio. Cada pieza es única y viaja con certificado de autenticidad firmado.",
     "inquireCta": "Consultar por esta pieza",
+    "orderControls": "Controles para ordenar las obras",
+    "moveUp": "Mover {{title}} hacia arriba",
+    "moveDown": "Mover {{title}} hacia abajo",
     "inquirySubject": "Consulta sobre {{title}}",
     "inquiryBody": "Hola Adri,\n\nMe interesa {{title}} y quisiera saber más sobre su disponibilidad y el proceso de compra.\n\nGracias."
   },
@@ -72,7 +75,11 @@
   "contact": {
     "eyebrow": "Ponte en contacto",
     "title": "Creamos algo juntas",
-    "intro": "Para consultas de venta, colaboraciones o visitas al estudio, escríbeme mediante el formulario o por correo. Respondo cada mensaje en un máximo de dos días hábiles.",
+    "intro": "Para consultas sobre obras, colaboraciones o visitas al estudio, contáctame directamente por correo o WhatsApp.",
+    "emailCta": "Enviar un correo",
+    "emailSubject": "Consulta desde la web de Adri Bru",
+    "whatsappCta": "Contactar por WhatsApp",
+    "whatsappMessage": "Hola Adri, te contacto a través de tu página web.",
     "emailLabel": "Correo",
     "emailValue": "info@adribru.com",
     "phoneLabel": "Teléfono",

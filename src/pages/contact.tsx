@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -6,31 +5,12 @@ import { useTranslation } from 'next-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-type FormState = {
-  name: string;
-  email: string;
-  message: string;
-};
-
 export default function ContactPage() {
   const { t } = useTranslation('common');
-  const [formState, setFormState] = useState<FormState>({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState<'idle' | 'submitted'>('idle');
   const email = t('contact.emailValue');
   const phone = t('contact.phoneValue');
   const location = t('contact.locationValue');
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
-    setFormState((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setStatus('submitted');
-    console.log('Contact form submitted:', formState);
-    setFormState({ name: '', email: '', message: '' });
-  };
+  const whatsappNumber = phone.replace(/[^\d]/g, '');
 
   return (
     <>
@@ -47,63 +27,22 @@ export default function ContactPage() {
               <h1 className="text-4xl font-semibold text-gray-900">{t('contact.eyebrow')}</h1>
               <p className="mt-4 text-sm text-gray-600">{t('contact.intro')}</p>
 
-              <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-                <div>
-                  <label htmlFor="name" className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
-                    {t('contact.form.name')}
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formState.name}
-                    onChange={handleChange}
-                    className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 shadow-sm transition focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
-                    {t('contact.form.email')}
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formState.email}
-                    onChange={handleChange}
-                    className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 shadow-sm transition focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
-                    {t('contact.form.message')}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    value={formState.message}
-                    onChange={handleChange}
-                    className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm text-gray-800 shadow-sm transition focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-xs font-medium uppercase tracking-[0.3em] text-white transition hover:bg-gray-700"
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href={`mailto:${email}?subject=${encodeURIComponent(t('contact.emailSubject'))}`}
+                  className="inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-center text-xs font-medium uppercase tracking-[0.25em] text-white transition hover:bg-gray-700"
                 >
-                  {t('contact.form.submit')}
-                </button>
-
-                {status === 'submitted' && (
-                  <p className="text-sm text-gray-600">{t('contact.form.success')}</p>
-                )}
-              </form>
+                  {t('contact.emailCta')}
+                </a>
+                <a
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(t('contact.whatsappMessage'))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border border-gray-400 px-6 py-3 text-center text-xs font-medium uppercase tracking-[0.25em] text-gray-800 transition hover:bg-gray-900 hover:text-white"
+                >
+                  {t('contact.whatsappCta')}
+                </a>
+              </div>
             </div>
 
             <aside className="space-y-6 self-start rounded-3xl border border-gray-200 bg-white/70 p-8 text-sm text-gray-700">

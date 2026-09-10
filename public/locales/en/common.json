@@ -48,8 +48,11 @@
   },
   "originals": {
     "title": "Original paintings",
-    "intro": "Every painting is created in small batches in my light-filled studio. Works ship worldwide, crated with museum-grade materials and insured delivery.",
+    "intro": "A rotating selection of works available in the studio. Each piece is unique and comes with a signed certificate of authenticity.",
     "inquireCta": "Inquire about this piece",
+    "orderControls": "Artwork ordering controls",
+    "moveUp": "Move {{title}} up",
+    "moveDown": "Move {{title}} down",
     "inquirySubject": "Inquiry about {{title}}",
     "inquiryBody": "Hello Adri,\n\nI am interested in {{title}} and would like to know more about its availability and purchase process.\n\nThank you."
   },
@@ -72,7 +75,11 @@
   "contact": {
     "eyebrow": "Get in touch",
     "title": "Let's create something together",
-    "intro": "For sales inquiries, collaborations, or studio visits, reach out using the form or via email. I respond to every message within two business days.",
+    "intro": "For artwork inquiries, collaborations, or studio visits, contact me directly by email or WhatsApp.",
+    "emailCta": "Send an email",
+    "emailSubject": "Inquiry from the Adri Bru website",
+    "whatsappCta": "Contact via WhatsApp",
+    "whatsappMessage": "Hello Adri, I am contacting you through your website.",
     "emailLabel": "Email",
     "emailValue": "info@adribru.com",
     "phoneLabel": "Phone",

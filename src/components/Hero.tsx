@@ -31,7 +31,7 @@ export default function Hero() {
         style={{ paddingTop: 'var(--header-height)' }}
       >
         <h1 className="text-5xl font-semibold uppercase tracking-[0.6em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.35)] sm:text-6xl md:text-7xl">
-          {t('Adri Bru')}
+          {/* {t('Adri Bru')} */}
         </h1>
       </div>
     </section>
