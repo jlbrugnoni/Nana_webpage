@@ -12,6 +12,7 @@ import { paintings, Painting } from '@/data/paintings';
 export default function OriginalsPage() {
   const { t, i18n } = useTranslation('common');
   const language = i18n.language || 'en';
+  const email = t('contact.emailValue');
   const [activePaintingId, setActivePaintingId] = useState<string | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
@@ -32,15 +33,15 @@ export default function OriginalsPage() {
             <p className="mt-4 text-sm text-gray-600">{t('originals.intro')}</p>
           </div>
 
-          <div className="mt-12 space-y-16">
+          <div className="mt-12 divide-y divide-gray-300 border-y border-gray-300">
             {paintings.map((painting) => {
               const statusKey = `paintings.status.${painting.status}` as const;
               return (
                 <article
                   key={painting.id}
-                  className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm"
+                  className="py-12 sm:py-16"
                 >
-                  <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-12">
+                  <div className="flex flex-col gap-10 md:flex-row md:items-stretch md:gap-16">
                     <div className="mx-auto w-full max-w-sm flex-shrink-0 md:mx-0 md:max-w-[360px] lg:max-w-[420px]">
                       <ImageCarousel
                         variant="portrait"
@@ -56,7 +57,7 @@ export default function OriginalsPage() {
                       />
                     </div>
 
-                    <div className="flex flex-1 flex-col gap-6 px-6 pb-8 md:px-0 md:pr-8 md:pt-8">
+                    <div className="flex flex-1 flex-col gap-6 md:py-6 lg:py-8">
                       <div>
                         <p className="text-xs uppercase tracking-[0.4em] text-gray-500">{t(statusKey)}</p>
                         <h2 className="mt-2 text-2xl font-semibold text-gray-900">{getCopy(painting.title)}</h2>
@@ -92,14 +93,26 @@ export default function OriginalsPage() {
                         </div>
                       </dl>
 
-                      <a
-                        href={`mailto:hello@example.com?subject=${encodeURIComponent(
-                          `Inquiry about ${getCopy(painting.title)}`
-                        )}`}
-                        className="mt-auto inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-xs font-medium uppercase tracking-[0.3em] text-white transition hover:bg-gray-700"
-                      >
-                        {t('originals.inquireCta')}
-                      </a>
+                      {painting.status === 'available' ? (
+                        <a
+                          href={`mailto:${email}?subject=${encodeURIComponent(
+                            t('originals.inquirySubject', { title: getCopy(painting.title) })
+                          )}&body=${encodeURIComponent(
+                            t('originals.inquiryBody', { title: getCopy(painting.title) })
+                          )}`}
+                          className="mt-auto inline-flex items-center justify-center rounded-full bg-gray-900 px-6 py-3 text-xs font-medium uppercase tracking-[0.3em] text-white transition hover:bg-gray-700"
+                        >
+                          {t('originals.inquireCta')}
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          disabled
+                          className="mt-auto inline-flex cursor-not-allowed items-center justify-center rounded-full bg-gray-300 px-6 py-3 text-xs font-medium uppercase tracking-[0.3em] text-gray-500"
+                        >
+                          {t('originals.inquireCta')}
+                        </button>
+                      )}
                     </div>
                   </div>
                 </article>
@@ -167,12 +180,12 @@ function Lightbox({ painting, startIndex, onClose, getCopy }: LightboxProps) {
       </button>
 
       <div className="flex w-full max-w-4xl flex-col items-center gap-6">
-        <div className="relative w-full overflow-hidden rounded-3xl bg-white">
+        <div className="relative w-full overflow-hidden">
           <div className="aspect-[3/4]">
             <img
               src={painting.images[index].src}
               alt={getCopy(painting.images[index].alt)}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </div>
           <button

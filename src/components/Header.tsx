@@ -110,7 +110,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={item.label}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 text-gray-700 transition hover:bg-gray-900 hover:text-white"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-300 text-gray-700 transition hover:bg-gray-900 hover:text-white"
             >
               <SocialIcon name={item.icon as SocialIconName} />
             </a>
@@ -196,20 +196,20 @@ type SocialIconName = 'instagram' | 'facebook' | 'whatsapp';
 function SocialIcon({ name }: { name: SocialIconName }) {
   if (name === 'instagram') {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
         <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm10 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
       </svg>
     );
   }
   if (name === 'facebook') {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
         <path d="M13 2a5 5 0 015 5v1h-2V7a3 3 0 00-3-3h-1a3 3 0 00-3 3v3H7v3h2v8h3v-8h2.5l.5-3H12V7a1 1 0 011-1h1z" />
       </svg>
     );
   }
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
       <path d="M12 2C6.486 2 2 6.281 2 11.5c0 2.47 1.066 4.735 2.83 6.365L4 22l4.337-1.437C9.255 21.078 10.595 21.5 12 21.5c5.514 0 10-4.281 10-9.5S17.514 2 12 2zm0 2c4.411 0 8 3.29 8 7.5s-3.589 7.5-8 7.5c-1.27 0-2.474-.29-3.55-.82l-.507-.247-2.608.864.863-2.366-.33-.314C4.632 15.419 4 13.505 4 11.5 4 7.29 7.589 4 12 4zm-3.154 3c-.144 0-.29.004-.436.01a.5.5 0 00-.463.52c.024 2.25 1.198 4.394 3.07 5.77 1.463 1.074 3.17 1.66 4.91 1.7a.5.5 0 00.49-.383c.09-.384.17-.775.236-1.165a.5.5 0 00-.337-.558l-2.032-.635a.5.5 0 00-.535.17l-.643.82a.5.5 0 01-.607.139c-1.074-.52-1.94-1.37-2.51-2.41a.5.5 0 01.034-.56l.684-.84a.5.5 0 00.088-.467l-.66-2.04A.5.5 0 008.846 7z" />
     </svg>
   );

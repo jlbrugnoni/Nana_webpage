@@ -40,12 +40,12 @@ export default function ImageCarousel({
 
   const containerClasses =
     variant === 'portrait'
-      ? 'relative w-full overflow-hidden rounded-3xl border border-gray-200 bg-white'
+      ? 'relative w-full overflow-hidden'
       : 'relative w-full overflow-hidden rounded-2xl bg-gray-100';
   const imageWrapClasses = variant === 'portrait' ? 'relative w-full' : 'relative h-72 sm:h-96';
   const imageClasses =
     variant === 'portrait'
-      ? 'h-full w-full object-cover'
+      ? 'h-full w-full object-contain'
       : 'h-full w-full object-cover';
   const aspectClasses = variant === 'portrait' ? 'aspect-[3/4]' : '';
 
@@ -111,4 +111,3 @@ export default function ImageCarousel({
     </div>
   );
 }
-

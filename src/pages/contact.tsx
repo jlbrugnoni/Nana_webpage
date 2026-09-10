@@ -44,8 +44,7 @@ export default function ContactPage() {
         <section className="mx-auto max-w-5xl px-4 pb-16">
           <div className="grid gap-10 md:grid-cols-[1.2fr_1fr]">
             <div className="rounded-3xl bg-white p-10 shadow-sm">
-              <p className="text-xs uppercase tracking-[0.4em] text-gray-500">{t('contact.eyebrow')}</p>
-              <h1 className="mt-4 text-4xl font-semibold text-gray-900">{t('contact.title')}</h1>
+              <h1 className="text-4xl font-semibold text-gray-900">{t('contact.eyebrow')}</h1>
               <p className="mt-4 text-sm text-gray-600">{t('contact.intro')}</p>
 
               <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -135,28 +134,6 @@ export default function ContactPage() {
                   {t('contact.details.location')}
                 </h3>
                 <p className="mt-1">{location}</p>
-              </div>
-              <div>
-                <h3 className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
-                  {t('contact.details.social')}
-                </h3>
-                <ul className="mt-2 space-y-1">
-                  <li>
-                    <a href="https://www.instagram.com/byadribru/" target="_blank" rel="noopener noreferrer" className="underline">
-                      Instagram
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer" className="underline">
-                      Behance
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="underline">
-                      LinkedIn
-                    </a>
-                  </li>
-                </ul>
               </div>
             </aside>
           </div>

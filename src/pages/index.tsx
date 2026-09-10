@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
       <main className="bg-[#f8f6f1]">
         <Hero />
-        {/* <FeaturedOriginals /> */}
+        <FeaturedOriginals />
         {/* <section className="bg-[#f1ede5] py-16">
           <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 md:flex-row md:items-center">
             <div className="md:w-1/2">

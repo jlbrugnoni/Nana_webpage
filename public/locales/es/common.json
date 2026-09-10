@@ -37,7 +37,7 @@
   "paintings": {
     "status": {
       "available": "Disponible",
-      "sold": "Coleccionada"
+      "sold": "Vendida"
     },
     "fields": {
       "size": "Medidas",
@@ -49,14 +49,21 @@
   "originals": {
     "title": "Obras originales",
     "intro": "Cada pintura nace en series pequeñas dentro de mi estudio lleno de luz. Las obras viajan aseguradas y embaladas con materiales de grado museístico.",
-    "inquireCta": "Consultar por esta pieza"
+    "inquireCta": "Consultar por esta pieza",
+    "inquirySubject": "Consulta sobre {{title}}",
+    "inquiryBody": "Hola Adri,\n\nMe interesa {{title}} y quisiera saber más sobre su disponibilidad y el proceso de compra.\n\nGracias."
   },
   "about": {
     "eyebrow": "Conoce a la artista",
-    "title": "Soy Adriana: pintora, viajera y coleccionista de color.",
-    "paragraph1": "Mi práctica habita la intersección entre intuición y estructura. Criada entre Colombia, España y República Dominicana, me inspiro en la arquitectura, los textiles vintage y el ritmo de los rituales cotidianos.",
-    "paragraph2": "Cada pintura comienza como un campo de gestos - tintas, carbonilla, puntadas - y evoluciona a través de capas translúcidas de óleo y acrílico. Construyo superficies que invitan al tacto y recompensan la mirada cercana.",
-    "paragraph3": "He expuesto en Latinoamérica y Europa, y mis originales viven en colecciones privadas a ambos lados del Atlántico. El estudio está abierto con cita previa para coleccionistas y colaboradores.",
+    "title": "Adri Bru",
+    "paragraph1": "Colombiana e italiana. Habito la creación desde distintos lenguajes: el diseño, la cerámica y la pintura. Cambia la materia, pero no el impulso: dar forma a lo que antes no existía.",
+    "paragraph2": "Mi obra nace de la improvisación y de la confianza en el gesto. Trabajo sin bocetos ni planes previos, dejando que la mano avance libremente hasta descubrir personajes que no conocía antes de comenzar.",
+    "paragraph3": "No dibujo lo que veo. Descubro lo que estaba esperando aparecer.",
+    "paragraph4": "Cada línea conserva la energía del instante en que fue creada: la duda, el impulso, el accidente y la decisión. No busco la perfección del trazo, sino su honestidad. Es en esa libertad donde encuentro mi lenguaje y donde mis personajes adquieren una identidad propia.",
+    "paragraph5": "En mi proceso conviven la línea, el color y la materia. Los trazos espontáneos y las grandes manchas de color abren nuevos caminos para que cada figura aparezca libremente, sin una imagen previa que determine el resultado.",
+    "paragraph6": "Cada obra es un encuentro con lo inesperado. Una pieza única, nacida sin respuestas previas y creada para conservar la emoción irrepetible de ese momento.",
+    "paragraph7": "Cada línea es un camino. Cada rostro, una historia.",
+    "portraitAlt": "Retrato en blanco y negro de la artista Adri Bru sosteniendo un ojo de cerámica",
     "practiceTitle": "Práctica de estudio",
     "practiceDescription": "Lienzos de gran formato, obras sobre papel y encargos a medida realizados en series limitadas.",
     "inspirationTitle": "Inspiración",

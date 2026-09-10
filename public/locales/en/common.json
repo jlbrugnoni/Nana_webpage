@@ -37,7 +37,7 @@
   "paintings": {
     "status": {
       "available": "Available",
-      "sold": "Collected"
+      "sold": "Sold"
     },
     "fields": {
       "size": "Size",
@@ -49,14 +49,21 @@
   "originals": {
     "title": "Original paintings",
     "intro": "Every painting is created in small batches in my light-filled studio. Works ship worldwide, crated with museum-grade materials and insured delivery.",
-    "inquireCta": "Inquire about this piece"
+    "inquireCta": "Inquire about this piece",
+    "inquirySubject": "Inquiry about {{title}}",
+    "inquiryBody": "Hello Adri,\n\nI am interested in {{title}} and would like to know more about its availability and purchase process.\n\nThank you."
   },
   "about": {
     "eyebrow": "Meet the artist",
-    "title": "Hi, I'm Adriana - painter, traveler, collector of color.",
-    "paragraph1": "My practice lives at the intersection of intuition and structure. Raised between Colombia, Spain and Dominican Republic, I draw inspiration from architecture, vintage textiles, and the rhythm of everyday rituals.",
-    "paragraph2": "Each painting begins as a field of gestures - inks, charcoal, stitched marks - and evolves through translucent layers of oil and acrylic. I build surfaces that invite touch and reward close looking.",
-    "paragraph3": "I have exhibited in Latin America and Europe, and my originals live in private collections across both continents. My studio is open by appointment for collectors and collaborators.",
+    "title": "Adri Bru",
+    "paragraph1": "Colombian and Italian. My creative practice moves across different languages: design, ceramics, and painting. The medium may change, but the impulse remains the same: to give form to something that did not exist before.",
+    "paragraph2": "My work is born from improvisation and trust in the gesture. I work without sketches or predetermined plans, allowing my hand to move freely until I discover characters I did not know before I began.",
+    "paragraph3": "I do not draw what I see. I discover what was waiting to appear.",
+    "paragraph4": "Each line preserves the energy of the moment in which it was created: the uncertainty, the impulse, the accident, and the decision. I do not seek perfection in the line, but honesty. It is within this freedom that I find my language and my characters acquire identities of their own.",
+    "paragraph5": "In my process, line, colour, and material coexist. Spontaneous marks and expansive fields of colour open new paths, allowing each figure to emerge freely, without a preconceived image determining the result.",
+    "paragraph6": "Each work is an encounter with the unexpected. A unique piece, born without predetermined answers and created to preserve the unrepeatable emotion of that moment.",
+    "paragraph7": "Every line is a path. Every face, a story.",
+    "portraitAlt": "Black-and-white portrait of artist Adri Bru holding a ceramic eye",
     "practiceTitle": "Studio practice",
     "practiceDescription": "Large-scale canvases, works on paper, and bespoke commissions crafted in limited series.",
     "inspirationTitle": "Inspiration",

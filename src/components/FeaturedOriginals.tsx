@@ -26,7 +26,7 @@ export default function FeaturedOriginals() {
           </Link>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 divide-y divide-gray-300 border-y border-gray-300">
           {featured.map((painting) => {
             const title = painting.title[language] ?? painting.title.en;
             const description = painting.description[language] ?? painting.description.en;
@@ -35,24 +35,22 @@ export default function FeaturedOriginals() {
             return (
               <article
                 key={painting.id}
-                className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="group grid gap-6 py-10 sm:grid-cols-[minmax(180px,280px)_1fr] sm:items-center sm:gap-10"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative mx-auto aspect-[3/4] w-full max-w-[280px] overflow-hidden">
                   <img
                     src={painting.images[0]?.src ?? '/hero.jpg'}
                     alt={painting.images[0]?.alt[language] ?? title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                   />
-                  <span className="absolute left-4 top-4 rounded-full bg-white/85 px-3 py-1 text-xs font-medium uppercase tracking-[0.3em] text-gray-700">
-                    {t(statusKey)}
-                  </span>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-                  <p className="mt-2 text-sm text-gray-600">{description}</p>
-                  <div className="mt-4 flex items-center justify-between text-sm text-gray-700">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.35em] text-gray-500">{t(statusKey)}</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-gray-900">{title}</h3>
+                  <p className="mt-4 max-w-xl text-sm leading-6 text-gray-600">{description}</p>
+                  <div className="mt-6 flex max-w-sm items-center justify-between border-t border-gray-300 pt-4 text-sm text-gray-700">
                     <span>{painting.size}</span>
                     {painting.status === 'available' ? (
                       <span className="font-medium">{painting.price}</span>
@@ -69,4 +67,3 @@ export default function FeaturedOriginals() {
     </section>
   );
 }
-
