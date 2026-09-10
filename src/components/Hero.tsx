@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 export default function Hero() {
   const { t } = useTranslation('common');
-  const images = ['/gallery/hero1.png', '/gallery/hero2.png', '/gallery/hero3.jpg'];
+  const images = ['/gallery/hero1.png', '/gallery/hero2.png', '/gallery/hero3.png'];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
